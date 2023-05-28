@@ -1,0 +1,3 @@
+npx sequelize-cli model:create --name User --attributes id:string,name:string,email:string,password:string
+npx sequelize-cli model:create --name Role --attributes id:integer,name:string
+npx sequelize-cli model:create --name Status --attributes id:UUID,title:string,body:string,user_id:string
