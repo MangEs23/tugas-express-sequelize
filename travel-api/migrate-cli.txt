@@ -1,0 +1,18 @@
+npx sequelize-cli model:generate --name Admin --attributes nama:string,email:string,password:string,token:string
+npx sequelize-cli model:generate --name Transaction --attributes nama:string,banyak:number,total:number,tanggal:dateonly
+npx sequelize-cli model:generate --name Transportation --attributes harga:integer,rute:string,keberangkatan:date,seat:string,booked:boolean
+
+// alt
+transportation
+- mobil:string
+- harga:integer
+- jumlah:seat
+- rute:string
+npx sequelize-cli model:generate --name Transaction --attributes nama:string,banyak:integer,total:float,tanggal:dateonly
+npx sequelize-cli model:generate --name Transportation --attributes mobil:string,supir:string,harga:integer,rute:string,keberangkatan:date,seat:integer
+
+// V2
+npx sequelize-cli model:generate --name Admin --attributes nama:string,email:string,password:string,token:string
+npx sequelize-cli model:generate --name Transaction --attributes nama:string,banyak:number,total:number,tanggal:dateonly
+npx sequelize-cli model:generate --name Ticket --attributes harga:integer,keberangkatan:date,seat:string,booked:boolean
+npx sequelize-cli model:generate --name Transportation --attributes mobil:string,jumlah_seat:integer,rute:string,jumlah_mobil:integer
